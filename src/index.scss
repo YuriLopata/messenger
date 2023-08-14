@@ -1,0 +1,72 @@
+@import "./constants/palette";
+
+// RESET START
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  transition: all 0.1s ease;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  user-select: none;
+}
+
+button {
+  background-color: #fff;
+
+  &:focus {
+    border: 1px solid $primary-info;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+// RESET END
+
+h2 {
+  font-size: 18px;
+}
+
+.wrapper {
+  height: 100svh;
+  position: relative;
+  display: flex;
+  max-height: 100svh;
+}
+
+.chats {
+  min-width: 360px;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid $primary-dark;
+  overflow-y: auto;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  header {
+    height: 64px;
+    padding: 22px 16px;
+  }
+}

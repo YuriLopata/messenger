@@ -1,0 +1,61 @@
+@import "../../constants/palette";
+
+.component-input {
+  padding: 16px 24px;
+
+  .component-input__text {
+    max-width: calc(100svw - 408px);
+    max-height: 82px;
+    position: relative;
+    display: flex;
+    font-size: 15px;
+    line-height: 20px;
+    border: 1px solid $primary-info;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    p {
+      z-index: 1;
+      width: 100%;
+      padding: 10px 16px;
+      border: none;
+    }
+
+    .component-input__placeholder {
+      position: absolute;
+      left: 16px;
+      padding: 10px 0;
+      color: $primary-info;
+      user-select: none;
+    }
+  }
+
+  .component-input__text--empty {
+    color: $primary-info;
+  }
+
+  .component-input__buttons {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .component-input__attach {
+      background: $primary-light;
+      border-radius: 4px;
+    }
+  }
+}

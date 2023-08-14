@@ -1,0 +1,71 @@
+@import "../../constants/palette";
+
+.component-message {
+    display: flex;
+    margin: 12px 24px 0 24px;
+
+    &--no-user-info {
+        margin-left: 56px;
+        margin-top: 4px;
+    }
+}
+
+.component-message__data {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+
+    .component-message__content-wrapper {
+        max-width: 60%;
+        display: flex;
+
+        &--my {
+            align-self: flex-end;
+
+            .component-message__content {
+                background: $secondary-dark !important;
+            }
+        }
+
+        .component-message__content {
+            max-width: 100%;
+            min-width: 70px;
+            position: relative;
+            white-space: normal;
+            border-radius: 4px;
+            background: $primary-main;
+
+            .component-message__text {
+                max-width: fit-content;
+                font-size: 15px;
+                line-height: 20px;
+                padding: 8px 12px;
+
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    margin-right: 40px;
+                }
+            }
+
+            .component-message__time {
+                position: absolute;
+                right: 12px;
+                bottom: 8px;
+            }
+        }
+    }
+
+    .component-message__name {
+        width: fit-content;
+        font-size: 15px;
+        line-height: 15px;
+        font-weight: bold;
+        margin-bottom: 4px;
+    }
+}
+
+.private {
+    margin-left: 24px;
+}

@@ -1,0 +1,11 @@
+@import "../../constants/palette";
+
+.component-message-date {
+    width: 86px;
+    line-height: 14px;
+    align-self: center;
+    background: $secondary-main;
+    padding: 8px 12px;
+    margin-top: 12px;
+    border-radius: 4px;
+}

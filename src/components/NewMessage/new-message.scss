@@ -1,0 +1,11 @@
+@import "../../constants/palette";
+
+.component-new-message {
+    background: $secondary-main;
+    color: $secondary-contrastText;
+    text-align: center;
+    font-size: 12px;
+    line-height: 12px;
+    padding: 6px 0;
+    margin-top: 12px;
+}
