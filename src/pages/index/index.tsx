@@ -27,7 +27,7 @@ export const PageIndex: FC<IPage> = ({ title }) => {
   const handleChatClick = useCallback(
     (chat: ChatInfo): void => {
       dispatch(setActiveChat(chat))
-      navigate(`/${chat.id}`)
+      navigate(`/messenger/${chat.id}`)
     },
     [dispatch, navigate]
   )
@@ -60,7 +60,7 @@ export const PageIndex: FC<IPage> = ({ title }) => {
   }, [dispatch])
 
   useEffect(() => {
-    const chatId = location.pathname.split("/")[1]
+    const chatId = location.pathname.split("/messenger/")[1]
     const chat = chats?.find((chat: ChatInfo) => chat?.id === chatId)
 
     dispatch(setActiveChat(chat))
